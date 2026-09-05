@@ -13,7 +13,7 @@ GitHub: https://github.com/pyanahida/Input-Method/blob/main/control.py
 
 # =====CONSTANT=====
 
-CONTROLS = {
+CONTROL = {
     "NUL": "\u0000",
     "SOH": "\u0001",
     "STX": "\u0002",
