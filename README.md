@@ -28,6 +28,7 @@ Type space‑separated tokens (romanization, digits, or punctuation) and press E
 | Script | Script Name | Description |
 |--------|-------------|-------------|
 | `mro.py` | Mro | Official romanization → Mro Unicode. [Details](https://zi.tools/ab/16A40) |
+| `control.py` | Control Char in ASCII | Official abbreviation → Control Unicode. |
 
 *(More to come – see Contributing)*
 
