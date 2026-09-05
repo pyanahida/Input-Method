@@ -15,6 +15,7 @@ Each script is self‑contained, shares a common interface (`main()` loop, `exit
 
 ```bash
 python3 <script>.py
+# Accept termux
 ```
 
 Type space‑separated tokens (romanization, digits, or punctuation) and press Enter.  
