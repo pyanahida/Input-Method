@@ -14,6 +14,7 @@ GitHub: https://github.com/pyanahida/Input-Method/blob/main/control.py
 # =====CONSTANT=====
 
 CONTROL = {
+  "C0": {
     "NUL": "\u0000",
     "SOH": "\u0001",
     "STX": "\u0002",
@@ -47,7 +48,45 @@ CONTROL = {
     "RS": "\u001E",
     "US": "\u001F",
     "DEL": "\u007F"
+  },
+  "C1": {
+    "PAD": "\u0080",
+    "HOP": "\u0081",
+    "BPH": "\u0082",
+    "NBH": "\u0083",
+    "IND": "\u0084",
+    "NEL": "\u0085",
+    "SSA": "\u0086",
+    "ESA": "\u0087",
+    "HTS": "\u0088",
+    "HTJ": "\u0089",
+    "VTS": "\u008A",
+    "PLD": "\u008B",
+    "PLU": "\u008C",
+    "RI": "\u008D",
+    "SS2": "\u008E",
+    "SS3": "\u008F",
+    "DCS": "\u0090",
+    "PU1": "\u0091",
+    "PU2": "\u0092",
+    "STS": "\u0093",
+    "CCH": "\u0094",
+    "MW": "\u0095",
+    "SPA": "\u0096",
+    "EPA": "\u0097",
+    "SOS": "\u0098",
+    "SGCI": "\u0099",
+    "SCI": "\u009A",
+    "CSI": "\u009B",
+    "ST": "\u009C",
+    "OSC": "\u009D",
+    "PM": "\u009E",
+    "APC": "\u009F",
+    "SHY": "\u00AD"
+  }
 }
+
+
 
 # =====Main Loop=====
 
@@ -59,8 +98,10 @@ def main():
     result = ""
     for i in parse:
         # Name
-        if i in CONTROL:
-            result += CONTROL[i]
+        if i in CONTROL["C0"]:
+            result += CONTROL["C0"][i]
+        elif i in CONTROL["C1"]:
+            result += CONTROL["C1"][i]
         else:
             result += "?"
     print(result)
